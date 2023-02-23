@@ -1,4 +1,4 @@
-#### The following procedure steps will be followed on the Liquid Limit test simulator
+#### The following procedure steps will be followed on the simulator
 
 1.	Click on the simulation tab of Consolidation test experiment. The following window will be displayed. Hover on the description icon to see a brief information about the experiment.</br>
 <img src="images/1.png" /></br>
