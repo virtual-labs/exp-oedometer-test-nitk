@@ -2,38 +2,81 @@
   "version": 2.0,
   "questions": [
     {
-      "question": "This is a Sample Question 1?",
+      "question": "Clay deposits are said to be overconsolidated if the present overburden effective pressure is less than the highest overburden effective pressure that it has experienced in the past.",
       "answers": {
-        "a": "answer1",
-        "b": "answer2",
-        "c": "answer3",
-        "d": "answer4"
+        "a": "False",
+        "b": "True"
       },
       "explanations": {
-        "a": "Explanation 1  <a href='www.google.com'>here</a>",
-        "b": "Explanation 2",
-        "c": "Explanation 2",
-        "d": "Explanation 2"
+        "a": "The above provided sentence is not false  because due to present overburden effective pressure is less than past highest overburden effective pressure then the clay deposits are said to be overconsolidated.",
+        "b": "The above provided sentence is True because the clay is said to be overconsolidated if the present overburden pressure is less than the highest overburden pressure experienced in the past."
+      },
+      "correctAnswer": "b",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "The vertical compression of the sample is measured using __________ .",
+      "answers": {
+        "a": "Dial gauge",
+        "b": "Pressure pad",
+        "c": "Loading frame",
+        "d": "None of the above"
+      },
+      "explanations": {
+        "a": "In this experiment dial gauge is used to measure vertical compression of the sample.",
+        "b": "Pressure pad is placed on top of the porous stone to exert pressure on the  sample.",
+        "c": "Loading frame is used to apply load on soil specimens.",
+        "d": "The correct answer is provided in the above option."
       },
       "correctAnswer": "a",
       "difficulty": "beginner"
     },
     {
-      "question": "This is a Sample Question 2?",
+      "question": "In a standard oedometer test, the sample is __________ .",
       "answers": {
-        "a": "answer1",
-        "b": "answer2",
-        "c": "answer3",
-        "d": "answer4"
+        "a": "Confined vertically",
+        "b": "Not confined laterally",
+        "c": "Confined laterally",
+        "d": "Not confined vertically"
       },
       "explanations": {
-        "a": "Explanation 1  <a href='www.google.com'>here</a>",
-        "b": "Explanation 2",
-        "c": "Explanation 2",
-        "d": "Explanation 2"
+        "a": "In standard oedometer tests  the confinement of soil is not vertical.",
+        "b": "In an oedometer test the soil is confined in a lateral direction.",
+        "c": "In this test the soil is confined laterally. When a sample is packed in a membrane and equal pressure is applied around the membrane, it is called confinement of soil in lateral direction.",
+        "d": "In the oedometer test the soil is not confined in a vertical direction."
       },
       "correctAnswer": "c",
-      "difficulty": "beginner"
+      "difficulty": "intermediate"
+    },
+    {
+      "question": "If the OCR value is greater than 1 then the soil is said to be __________ .",
+      "answers": {
+        "a": "Normally consolidated",
+        "b": "Over consolidated",
+        "c": "Preconsolidated",
+        "d": "None of the above"
+      },
+      "explanations": {
+        "a": "A clay is said to be normally consolidated when the soil is currently experiencing higher pressure. If OCR value is equal to 1 then it is normally consolidated soil.",
+        "b": "A clay is said to be normally consolidated when the soil is currently experiencing higher pressure. If OCR value is greater than 1 then it is normally consolidated soil.",
+        "c": "The maximum pressure that is ever experienced by soil is preconsolidated soil. If OCR value is less than 1 then it is preconsolidated soil.",
+        "d": "The correct answer is provided in the above option."
+      },
+      "correctAnswer": "c",
+      "difficulty": "intermediate"
+    },
+    {
+      "question": "Filter paper needs to be placed at the top and bottom of the soil specimen.",
+      "answers": {
+        "a": "True",
+        "b": "False"
+      },
+      "explanations": {
+        "a": "Placing filter paper on soil specimens avoids the entrance of soil particles to porous stone, so it is necessary to place the filter paper on the soil specimen. Hence the above sentence is true.",
+        "b": "Filter paper needs to be placed on top and bottom of soil specimens. Hence the above option is not false."
+      },
+      "correctAnswer": "a",
+      "difficulty": "advanced"
     }
   ]
 }

@@ -2,38 +2,89 @@
   "version": 2.0,
   "questions": [
     {
-      "question": "This is a Sample Question 1?",
+      "question": "Decrease in volume of soil mass due to expulsion of air voids is known as __________.",
       "answers": {
-        "a": "answer1",
-        "b": "answer2",
-        "c": "answer3",
-        "d": "answer4"
+        "a": "Consolidation",
+        "b": "Shrinkage",
+        "c": "Compression",
+        "d": "Bulking"
       },
       "explanations": {
-        "a": "Explanation 1  <a href='www.google.com'>here</a>",
-        "b": "Explanation 2",
-        "c": "Explanation 2",
-        "d": "Explanation 2"
-      },
-      "correctAnswer": "a",
-      "difficulty": "beginner"
-    },
-    {
-      "question": "This is a Sample Question 2?",
-      "answers": {
-        "a": "answer1",
-        "b": "answer2",
-        "c": "answer3",
-        "d": "answer4"
-      },
-      "explanations": {
-        "a": "Explanation 1  <a href='www.google.com'>here</a>",
-        "b": "Explanation 2",
-        "c": "Explanation 2",
-        "d": "Explanation 2"
+        "a": "Decrease of volume of soil mass due to the expulsion of water voids due to the gradual increase in static load is called consolidation.",
+        "b": "The volume change which occurs due to the change in moisture content is termed as shrinkage.",
+        "c": "Decrease in volume of soil mass due to the expulsion of air voids is termed as compression",
+        "d": "It is the property of sand to increase in volume due to addition of moisture content. The increased total volume of moist fine aggregate over the same dry mass."
       },
       "correctAnswer": "c",
       "difficulty": "beginner"
-    }
+    },
+    {
+      "question": "The consolidation of a soil mass can also be schematically explained using the ______________ .",
+      "answers": {
+        "a": "Spring analogy",
+        "b": "Soil phase diagram",
+        "c": "Soil particle distribution",
+        "d": "None of the above"
+      },
+      "explanations": {
+        "a": "The consolidation can also be explained using the spring analogy where spring represents the soil structure and water in the container represents pore water in the soil.",
+        "b": "Soil phase diagram is representation of different phases separated in soil.",
+        "c": "Soil particle distribution is the separation of soil particles according to the size of the soil.",
+        "d": "The correct answer is provided in the above option."
+      },
+      "correctAnswer": "a",
+      "difficulty": "beginner"
+      ,
+      {
+        "question": "This is a Sample Question 2?",
+        "answers": {
+          "a": "Type of soil",
+          "b": "Permeability",
+          "c": "Physical conditions",
+          "d": "All of the above"
+        },
+        "explanations": {
+          "a": "The rate of escape of pore water depends on soil type and its property.",
+          "b": "Permeability is the ability of water to pass through the pores present in the soil, Hence rate of escape of pore water is directly proportional to permeability.",
+          "c": "Rate of escape of pore water also depends on the physical condition of soil.",
+          "d": "The rate of escape of pore water is directly proportional to all the above provided options i.e type of soil, Permeability, Physical condition."
+        },
+        "correctAnswer": "d",
+        "difficulty": "intermediate"
+      },
+      {
+        "question": "Which of the following instrument is not required to conduct the consolidation test?",
+        "answers": {
+          "a": "Pressure pad",
+          "b": "Filter paper",
+          "c": "Porous stone",
+          "d": "Steel scale"
+        },
+        "explanations": {
+          "a": "Pressure pads with steel balls  are placed on the top of porous stone which is used to exert pressure on it.",
+          "b": "Filter paper is a layer used between soil specimen and porous stone to avoid entry of soil particles to pores of stone.",
+          "c": "Porous stone is placed above and below the soil specimen  to represent the previous soil layer in the field.",
+          "d": "Steel scale is used to measure the dimensions, where no measurement is required in this experiment."
+        },
+        "correctAnswer": "d",
+        "difficulty": "intermediate"
+      },
+      {
+        "question": "The apparatus used for the conduction of this experiment is __________ .",
+        "answers": {
+          "a": "Triaxial testing machine",
+          "b": "Consolidometer",
+          "c": "Permeameter",
+          "d": "None of the above"
+        },
+        "explanations": {
+          "a": "Triaxial testing machine is used to determine the shear strength of the soil.",
+          "b": "Consoildometer is the apparatus used in the consolidation test experiment.",
+          "c": "A Permeameter is an apparatus used to determine permeability of soil.",
+          "d": "Correct answer is provided in the above option."
+        },
+        "correctAnswer": "b",
+        "difficulty": "advanced"
+      }
   ]
 }
