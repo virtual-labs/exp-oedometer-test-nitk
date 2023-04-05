@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>SOLVE</title>
+<script language="JavaScript" type="text/javascript" src="js/jquerymin.js"></script>
+
+<link rel="stylesheet" href="css/consol.css" />
+<script defer type="text/javascript" src="js/CanvasJS-graph.js"></script> <!-- CanvasJs.com canvasJs library-->
+<script defer type="text/javascript" src="js/logTMethodGraph.js"></script> <!-- Graph code created using CanvasJs.com-->
+<script defer type="text/javascript" src="js/rootTMethodGraph.js"></script> <!-- Graph code created using CanvasJs.com-->
+<script defer type="text/javascript" src="js/consol.js"></script>
+<script>
+var simsubscreennum=0;
+var temp=0;
+</script>
+<style>
+.popup
+{
+	border-radius:5px;
+	background-color:black;
+	color:white;
+	padding:5px;
+}
+
+.tooltip {
+  position: relative;
+  display: inline-block;
+  border-bottom: 1px dotted black;
+}
+
+.tooltip .tooltiptext {
+  left:102px;
+  visibility: hidden;
+  width: 550px;
+  background-color: black;
+  color: #fff;
+  border-radius: 6px;
+  padding: 10px 10px 10px 10px;
+
+  /* Position the tooltip */
+  position: absolute;
+  z-index: 100;
+ /* <!-- text-align:center; -->*/
+}
+
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+}
+
+</style>
+</head>
+
+<body style="margin:0; font-family:verdana;">
+<div id="simscreen">
+<div id="title"><h3>CONSOLIDATION TEST</h3></div>
+
+<div class="simsubscreen" id="canvas0" >
+	<h4 class="incanvas">Objective:</h4>
+	<p class="incanvas" style="font-size:14px;">To determine the coefficient of consolidation of a soil sample by conducting a one dimensional<br> consolidation test using a fixed ring type consolidometer.</p><br/>
+	<h4 class="incanvas">Apparatus used:</h4>
+	<p class="incanvas" style="font-size:14px;">Fixed ring type consolidometer, Specimen ring, Porous stones, Filter paper, Guide ring, Outer ring,<br> Pressure pad, Steel ball, Stop watch, Loading device etc.</p>
+	 <img style="position:absolute; left:120px; top:190px;" title = "" src="images/human.png" />
+	<img style="position:absolute; left:320px; top:210px; width:20%;" title = "" src="images/fullSetup.png" />
+	<!-- <img style="position:absolute; left:150px; top:320px;" title = "Table" src="images/table.png" /> -->
+	<!--<img style="position:absolute; left:530px; top:322.5px; width:7%; " title = "Metal tube" src="images/tin.png" />
+	<img style="position:absolute; left:380px; top:200px; width:15%; " title = "Vane test apparatus.png" src="images/vaneShear1.png" />
+	<img style="position:absolute; left:190px; top:280px; width:18%;"  title = "Weighing Machine" src="images/wm1.png" /> -->
+	&nbsp;<span class="tooltip" style="border-bottom:1px dotted ; color:red; top:20px; cursor:pointer;"><strong>Description</strong>
+	<span  class="tooltiptext" style="font-size:14px; text-align:justify;  line-height:1.3; letter-spacing:0.5px;"><strong style="color:red;">Consolidation of soil</strong> is the gradual process of reduction of volume of soil (partially or fully saturated) under sustained loading due to the expulsion of water from pores present in the soil.</span></span>
+</div>
+
+
+<div class="simsubscreen" id="canvas1" style="visibility:hidden;">
+	<strong class="incanvas">STEP</strong>
+	<span class="circlebg">&nbsp;1&nbsp;</span>
+	<p class="steptext">&nbsp;Take the soil sample in a container and mix it with water until a fine paste is formed.</p>
+	<div id="1-14" style="position:absolute; left:230px; top:390px; width:79px; height:23px; background-color:#BB834C; border-radius: 100px / 30px; visibility:hidden;"></div>
+	<div id="1-10" style="position:absolute; left:229px; top:435px; width:79px; height:21px; background-color:#A4DDEC; border-radius: 100px / 30px;"></div>
+	<div id="1-11" style="position:absolute; left:207px; top:410px; width:135px; height:60px; background-color:#FFFFFF;"></div>
+	<div id="1-3" style="position:absolute; left: 338px; top:405.75px; width:91px; height:140px; background-color:#A4DDEC; visibility:hidden;"></div>
+
+	<img id="1-7" style="position: absolute; left: 233.5px; top: 394px; width:75px; height:20px;" src="images/residual.png"/>
+	<img id="1-8" style="position: absolute; left: 225px; top: 380.25px; " src="images/plate.png"/>
+
+	<img id="1-12" style="position:absolute; left:150px; top:275px; visibility:hidden; cursor:pointer;" src="images/spatula.png"/>
+	<img id="1-13" style="position:absolute; left:240px; top: 292.5px; visibility:hidden;" src="images/trowel2.png"/>
+
+	<img id="1-9" style="position:absolute; left:255px; top:377px; visibility:hidden;" src="images/wa.png"/>
+
+	<img id="1-5" style="position:absolute; left: 390px; top:208px;  cursor:pointer;" src="images/msrdev1.png"/>
+	<img id="1-6" style="position:absolute; left:275px; top:305px; visibility:hidden;" src="images/msrdev2.png"/>
+</div>
+
+<div id="canvas2" class="simsubscreen" style="visibility:hidden;">
+	<strong class="incanvas">STEP</strong>
+	<span class="circlebg">&nbsp;2&nbsp;</span>
+	<p class="steptext">&nbsp; Saturate the porous stones by submerging them in distilled water for 4-8 hours prior to the conduction of the experiment.</p>
+		<img id="2-1" style="position:absolute; left:350px; top:250px; width:170px; height:150.3px; " title="Beaker with distilled water" src="images/submerge.png"/>
+		<img id="2-2" style="position:absolute; left:350px; top:250px; width:170px; height:150.3px; visibility:hidden;"  title="Beaker with distilled water and porous stone" src="images/submerge1.png"/>
+		<img id="2-3" style="position:absolute; left:350px; top:250px; width:170px; height:150.3px; visibility:hidden;" title="Beaker with distilled water and porous stones" src="images/submerge2.png"/>
+		<img id="2-4" style="position:absolute; left:75px; top:375px;  cursor:pointer;" title="Porous stone"  src="images/porous.png"/>
+		<img id="2-5" style="position:absolute; left:75px; top:375px; visibility:hidden; cursor:pointer; visibility:hidden;" title="Porous stone" src="images/porous.png"/>
+		<img id="2-6" style="position:absolute; left:75px; top:290px; visibility:hidden; cursor:pointer; visibility:hidden;" src="images/handPorous.png"/>
+</div>
+
+<div id="canvas3" class="simsubscreen" style="visibility:hidden;">
+	<strong class="incanvas">STEP</strong>
+	<span class="circlebg">&nbsp;3&nbsp;</span>
+	<p class="steptext">&nbsp; Measure the weight of empty specimen ring.</p>
+	<img id="3-0" style="position:absolute; left:275px; top:300px;" src="images/wm1.png" />
+	<img id="3-0on" style="position:absolute; left:335px; top:420px; cursor:pointer;" src="images/on.png" />
+	<img id="3-1" style="position:absolute; left:440px; top:420px; cursor:pointer;" src="images/tare.png" />
+	<img id="3-2" style="position:absolute; left:70px; top:385px;" src="images/ring.png" />
+	<p id="p3-1" style="position:absolute; left:378px; top:375px;"></p>
+	<p id="p3-2" style="position:absolute; left:20px; top:480px; font-size:14px;">Weight of empty specimen ring = _________ g</p>
+</div>
+	
+<div id="canvas4" class="simsubscreen" style="visibility:hidden;">
+	<strong class="incanvas">STEP</strong>
+	<span class="circlebg">&nbsp;4&nbsp;</span>
+	<p class="steptext">&nbsp;Fill the specimen ring with the wet soil sample.</p>
+	<div id="4-0" style="position:absolute; left:210px; top:390px; width:79px; height:23px; background-color:#BB834C; border-radius: 100px / 30px; "></div>
+	<div id="4-5" style="position:absolute; left: 483px; top: 400px; width: 43.5px; height: 16px; background-color: rgb(187, 131, 76); border-radius: 50%; visibility: hidden;"></div>
+	<img id="4-1" style="position: absolute; left: 450px; top: 390px;" src="images/ring.png"/>
+	<img id="4-2" style="position:absolute; left: 205px; top: 380.25px;" src="images/plate.png" />
+	<img id="4-3" style="position:absolute; left:150px; top:275px; cursor:pointer; visibility:hidden;" src="images/spoon.png"/>
+	<img id="4-4" style="position:absolute; left:145px; top:355px; cursor:pointer; visibility:hidden;" src="images/spoonWithSoil.png"/>
+</div>
+
+<div id="canvas5" class="simsubscreen" style="visibility:hidden;">
+	<strong class="incanvas">STEP</strong>
+	<span class="circlebg">&nbsp;5&nbsp;</span>
+	<p class="steptext">&nbsp;Measure the weight of specimen ring with wet soil sample.</p>
+	<img id="5-0" style="position:absolute; left:275px; top:300px;" src="images/wm1.png" />
+	<img id="5-1" style="position:absolute; left:440px; top:420px;" src="images/tare.png" />
+	<div id="5-5" style="position:absolute; left: 70px; top: 385.5px; width: 117px; height: 25px; background-color: rgb(187, 131, 76); border-radius: 50%;"></div>
+	<img id="5-2" style="position:absolute; left:70px; top:385px;" src="images/ring.png" />
+	<p id="p5-1" style="position:absolute; left:378px; top:375px;"></p>
+	<p id="p5-2" style="position:absolute; left:20px; top:480px; font-size:14px;">Weight of specimen ring + wet soil, W<sub>2</sub> = _________ g</p>
+</div>
+
+<div id="canvas6" class="simsubscreen" style="visibility:hidden;">
+	<strong class="incanvas">STEP</strong>
+	<span class="circlebg">&nbsp;6&nbsp;</span>
+	<p class="steptext">&nbsp;Assemble the consolidometer. Place the porous stone at the bottom and place a filter paper. Then keep the specimen ring with soil above the filter paper and again place a filter paper and a porous stone above it respectively. </p>
+	<p id="p6-1" style="position:absolute; left:60px; top:70px; font-size:12px; font-weight:bold; color:red;">Select following apparatus in appropriate order to place it on the consolidometer </p>
+	<img id="6-2P1" style="position:absolute; left: 70px; top: 120px; height:76px; width:76px; cursor:pointer;" title="Porous stone" src="images/poros.png" />
+	<div id="6-2F1" style="position:absolute; left:190px; top:120px; background-color:#fff; border:1px solid black; height:75px; border-radius:50%; width:75px; cursor:pointer;" title="Filter paper"></div>
+	<div id="6-2S" style="position:absolute; left: 310px; top: 120px; background-color:#E68800; border:1px solid black; height:75px; border-radius:50%; width:75px; cursor:pointer;"title="Specimen ring with soil"></div>
+	<div id="6-2F2" style="position:absolute; left:430px; top:120px; background-color:#fff; border:1px solid black; height:75px; border-radius:50%; width:75px; cursor:pointer;" title="Filter paper"></div>
+	<img id="6-2P2" style="position:absolute; left: 550px; top: 120px; height:76px; width:76px; cursor:pointer;" title="Porous stone" src="images/poros.png" />
+	<p id="p6-2" style="position:absolute; left:62.5px; top:200px; font-size:12px; font-weight:bold;">Porous stone 1 &nbsp;&nbsp;&nbsp;&nbsp; Filter paper 1 &nbsp;&nbsp;&nbsp;&nbsp; Specimen ring &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Filter paper 2 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Porous stone 2 <br><br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;with soil</p>
+	<p id="p6-3" style="position:absolute; left:240px; top:265px; font-size:12px; font-weight:bold; color:orange;">Top view of consolidometer</p>
+	<img id="6-1F" style="position:absolute; left:260px; top:300px;" src="images/filterInC.png" />
+	<img id="6-1P" style="position:absolute; left:260px; top:300px; visibility:hidden;" src="images/porosInC.png" />
+	<img id="6-1S" style="position:absolute; left:260px; top:300px; visibility:hidden;" src="images/soilInC.png" />
+	<p id="p6-4" style="position:absolute; left:200px; top:450px; font-size:12px; font-weight:bold; color:green;"></p>
+	<div id="6-3" style="position:absolute; left:50px; top:120px; background-color:#fff; height:140px;"></div>
+</div>
+
+<div id="canvas7" class="simsubscreen" style="visibility:hidden;">
+	<strong class="incanvas">STEP</strong>
+	<span class="circlebg">&nbsp;7&nbsp;</span>
+	<p class="steptext">&nbsp;Close the consolidometer with the lid.</p>
+	<p id="p7-1" style="position:absolute; left:100px; top:195px; font-size:12px; font-weight:bold; color:orange;">Top view of consolidometer</p>
+	<img id="7-1" style="position:absolute; left:120px; top:230px;" src="images/filterInC.png" />
+	<img id="7-2" style="position:absolute; left:450px; top:80px; cursor:pointer;" title="Consolidometer lid" src="images/lid.png" />
+	<p id="p7-2" style="position:absolute; left:440px; top:195px; font-size:12px; font-weight:bold; color:orange; visibility:hidden;">Side view of consolidometer</p>
+	<img id="7-3" style="position:absolute; left:450px; top:230px; width:200px; height:150px; visibility:hidden;" src="images/console1.png" />
+</div>
+
+<div id="canvas8" class="simsubscreen" style="visibility:hidden;">
+	<strong class="incanvas">STEP</strong>
+	<span class="circlebg">&nbsp;8&nbsp;</span>
+	<p class="steptext">&nbsp;Position the pressure pad centrally on the top porous stone.</p>
+	<p id="p8-1" style="position:absolute; left:170px; top:150px; font-size:12px; font-weight:bold; color:orange; "></p>
+	<img id="8-1" style="position:absolute; left:115.5px; top:187px; " src="images/console1.png" />
+	<img id="8-2" style="position:absolute; left:500px; top:220px; " title="Pressure pad"src="images/pad.png" />
+</div>
+
+<div id="canvas9" class="simsubscreen" style="visibility:hidden;">
+	<strong class="incanvas">STEP</strong>
+	<span class="circlebg">&nbsp;9&nbsp;</span>
+	<p class="steptext">&nbsp;Mount the mould assembly on the loading frame and centre it such that the load applied is axial.</p>
+	<img id="9-1" style="position:absolute; left:100px; top:120px; width:210px;" src="images/setup.png" />
+	<img id="9-2" style="position:absolute; left:450px; top:322.5px; width:110px;" src="images/console2.png" /> <!--left:152px; top:270px; width:110px;-->
+</div>
+
+<div id="canvas10" class="simsubscreen" style="visibility:hidden;">
+	<strong class="incanvas">STEP</strong>
+	<span class="circlebg">&nbsp;10&nbsp;</span>
+	<p class="steptext">&nbsp;Connect the mould assembly to the water reservoir and the sample is allowed to saturate. </p>
+	<img id="10-1" style="position:absolute; left:120px; top:100px; width:210px;" src="images/not_connected.png" />
+	<span id="connect" style="position:absolute; left:295px; top:380px; width:25px; height:25px; cursor:pointer;"></span>
+	<img id="10-2" style="position:absolute; left:300px; top:360px; width:55px; height:60px; visibility:hidden;" src="images/hand.png" />
+	<img id="10-3" style="position:absolute; left:120px; top:100px; width:210px; visibility:hidden;" src="images/connected.png" />
+</div>
+
+<div id="canvas11" class="simsubscreen" style="visibility:hidden;">
+	<strong class="incanvas">STEP</strong>
+	<span class="circlebg">&nbsp;11&nbsp;</span>
+	<p class="steptext">&nbsp; Place the dial gauge at proper position to measure the vertical compression of the specimen.</p>
+	<img id="11-1" style="position:absolute; left:300px; top:100px; width:210px;" src="images/connected.png" />
+	<img id="11-2" style="position:absolute; left:120px; top:150px; width:55px; height:61px; " src="images/dialGuage.png" />
+</div>
+
+<div id="canvas12" class="simsubscreen" style="visibility:hidden;">
+	<strong class="incanvas">STEP</strong>
+	<span class="circlebg">&nbsp;12&nbsp;</span>
+	<p class="steptext">&nbsp; Apply the load to the assembly and note the initial settlement. Start the stopwatch simultaneously and take the dial gauge readings at regular intervals, until 90% consolidation is reached, i.e., within 24 hours.</p>
+	<img id="12-1" style="position:absolute; left:60px; top:65px;" src="images/fullSetup.png" />
+	<img id="12-2" style="position:absolute; left:450px; top:470px; cursor:pointer;" src="images/initialWeight.png" />
+	<div id="12-3" style=""></div>
+	<img id="12-4" style="position:absolute; left:315px; top:70px; width:135px; visibility:hidden;" title="Zoomed view of dial guage" src="images/zoomedDialGuage.png" />
+	<img id="12-5" style="position:absolute; left: 366px; top: 120px; width: 5px; visibility:hidden;  transform:rotate(0deg);" title="Zoomed view of dial guage" src="images/smallNeedle.png" />
+	<img id="12-6" style="position:absolute; left: 378px; top: 95px; width: 10px; visibility:hidden; transform:rotate(0deg);" title="Zoomed view of dial guage" src="images/bigNeedle.png" />
+	<p id="p12-1" style="position:absolute; left:300px; top:215px; font-size:12px; color:red; visibility:hidden;">Zoomed view of dial guage</p>
+	<img id="12-7" style="position:absolute; left: 540px; top: 70px; width:120px;  visibility:hidden;"  title="stopwatch" src="images/clock.png" />
+	<img id="12-8" style="position:absolute; left: 595px; top: 81px; width:9px; visibility:hidden;" src="images/needle.png" />
+	<p id="p12-2" style="position:absolute; left: 570px; top: 190px; font-size:12px; color:red; visibility:hidden;">Stopwatch <span style=" font-size:9px;">&nbsp;(3x faster)</span></p>
+	
+	<div id="tabDiv12" style="overflow-y:auto; position:absolute; left:300px; top:250px; height:230px; visibility:hidden;">
+	<table id="tab12" style="font-size:12px; border:1px solid black; text-align:center;">
+		<tr style="border:1px solid black; ">
+			<th style="border:1px solid black; padding:5px; ">Elapsed time (min)</th>
+			<th style="border:1px solid black; padding:0 35px; ">√t</th>
+			<th style="border:1px solid black; padding:5px;">Dial gauge reading (div)</th>
+		</tr>
+		<!-- <tr style="border:1px solid black; "> -->
+			<!-- <td style="border:1px solid black; padding:5px; ">0</td> -->
+			<!-- <td style="border:1px solid black; padding:0 35px; ">0</td> -->
+			<!-- <td style="border:1px solid black; padding:5px;">430</td> -->
+		<!-- </tr> -->
+	</table>
+	</div>
+</div>
+
+<div id="canvas13" class="simsubscreen" style="visibility:hidden;">
+	<strong class="incanvas">STEP</strong>
+	<span class="circlebg">&nbsp;13&nbsp;</span>
+	<h3 class="steptext" style="font-size:20px;">&nbsp;Observations : </h3>
+	<table id="tab13" style="position:absolute; left:0px; top:60px;font-size:12px; border:1px solid black; text-align:center; width:300px;">
+		<tr style="border:1px solid black; ">
+			<th style="border:1px solid black; padding:5px; ">Elapsed time (min)</th>
+			<th style="border:1px solid black; padding:0 35px; ">√t</th>
+			<th style="border:1px solid black; padding:5px;">Dial gauge reading (div)</th>
+		</tr>
+	</table>
+	<span class="tooltip" style="border-bottom:1px dotted; position:absolute; left:350px; top:60px; cursor:pointer;"><strong>Variables used in calculation</strong>
+	<span  class="tooltiptext" style="font-size:14px; text-align:justify; width: 300px; left:25px;">
+	<p>Height of soil specimen, H = 2cm</p>
+	<p>Change in height of soil specimen,<br> ΔH = (Initial - Final dial gauge reading) x Least count of dial gauge</p>
+	<p>Least count of dial gauge = 0.001</p>
+	</span></span>
+	<div style="position:absolute; left:350px; top:90px;"><h3 >Calculation : </h3>
+	<span style="font-size:14px;">Drainage path, d = <span class="frac"><sup>H - <span class="frac"><sup>ΔH</sup><span>&frasl;</span><sub>2</sub></span></sup><span>&frasl;</span><sub>2</sub></span>
+	<span style="position:absolute; left:125px; top:130px;">= &nbsp;<input id="dp" type="text" style="width:45px; width:50px; border:none; border-bottom:2px solid black;" required></span>
+	<span id="mark13" class="markHidden" style="position:absolute; left:210px; top:127px; font-size:20px; "></span>
+	<button id="check13" class="clsBtn" style="position:absolute; left:230px; top:125px;">CHECK</button>
+	<button id="result13" class="clsBtn" style="position:absolute; left:290px; top:125px;">RESULT</button>
+	</span>
+	</div>
+</div>
+
+<div class="simsubscreen" id="canvas14" style="visibility:hidden">
+	<center><h2 id="step14" style="font-family:verdana;  position:absolute; left:200px; top:-10px; ">Characteristic Curve<h2></center>
+	
+	<p id="p14-1" style=" position:absolute; left:260px; top:42.5px; font-size:14px; border-bottom:2px solid black; font-weight:bold;">Log t method</p>
+	<div id="chartContainer" style="height: 400px; width: 700px; margin-left:-20px; margin-right:100px; margin-top:95px"></div> 
+	
+	<div style="  position:absolute; left:575px; top:455px; background-color:white; width:120px; height:60px;"></div>
+	<div style="  position:absolute; left:-25px; top:455px; background-color:white; width:120px; height:60px;"></div>
+	
+	<span class="tooltip" style="border-bottom:1px dotted ; color:red; position:absolute; top:60px; cursor:pointer;"><strong>Description</strong>
+	<span  class="tooltiptext" style="font-size:14px; text-align:justify; position:absolute; left:50px; padding-right:30px; line-height:150%;">
+	<ol>
+	<li>Plot the dial gauge readings v/s the elapsed time on a semi log graph sheet</li>
+	<li>Join the points thus plotted with a smooth curve</li>
+	<li>Draw a tangent to this curve</li>
+	<li>Draw a horizontal line connecting the points which are showing a horizontal pattern in the plotted curve; this point will be d<sub>100</sub></li>
+	<li>Draw a vertical line from the first point of the plotted curve which gives us t<sub>1</sub></li>
+	<li>Multiply the t1 value by 4, the derived value should be plotted as t<sub>2</sub>  and should be carried over to the curve path, which is point C</li>
+	<li>Measure the vertical distance between point B and point C and multiply the value by 2, we will derive the value of z<sub>0</sub> 
+	<li>Draw the horizontal line corresponding to the z<sub>0</sub>  height, this will provide d<sub>0</sub> </li>
+	<li>The average of d<sub>0</sub> and d<sub>100</sub> will give us the d<sub>50</sub>  value</li>
+	<li>Now draw a horizontal line from d<sub>50</sub> point and join to the plotted curve, the point thus derived is point F</li>
+	<li>Draw a vertical line from F and thus we will get t<sub>50</sub> </li>
+	<ol>
+	</span></span>
+</div>
+
+<div class="simsubscreen" id="canvas15" style="visibility:hidden">
+	<h2 style="font-family:verdana;  position:absolute; left:10px; top:20px; ">Calculations</h2>
+	<span class="tooltip" style="border-bottom:1px dotted; position:absolute; left:10px; top:250px; cursor:pointer;"><strong>Variables used in calculation</strong>
+	<span  class="tooltiptext" style="font-size:14px; text-align:justify; width:400px; left:90%;">
+	<p>Time factor, T<sub>v</sub>50 = 0.1963</p>
+	<p>Time corresponding to 50% consolidation, t<sub>50</sub> = 1.5min</p>
+	<p>Drainage path, d = 0.983</p>
+	</span></span>
+	
+	<div style="position:absolute; left:10px; top:120px;">
+	<span style="font-size:14px;">Coefficient of consolidation, C<sub>v</sub> = <span class="frac"><sup>T<sub>v</sub>50 x d<sup>2</sup> </sup><span>&frasl;</span><sub>t<sub>50</sub></sub></span>
+	<span style="position:absolute; left:222.5px; top:80px;">= &nbsp;<input id="cv" type="text" style="width:45px; width:50px; border:none; border-bottom:2px solid black;" required><span style="position:absolute; left:77.5px; top:-1px;">cm<sup>2</sup>/sec</span></span>
+	<span id="mark15" class="markHidden" style="position:absolute; left:370px; top:77.5px; font-size:20px; "></span>
+	<button id="check15" class="clsBtn" style="position:absolute; left:400px; top:77px;">CHECK</button>
+	<button id="result15" class="clsBtn" style="position:absolute; left:455px; top:77px;">RESULT</button>
+	</span>
+	</div>
+</div>
+
+<div class="simsubscreen" id="canvas16" style="visibility:hidden">
+	<center><h2 id="step16" style="font-family:verdana;  position:absolute; left:200px; top:-10px; ">Characteristic Curve<h2></center>
+	<p id="p16-1" style=" position:absolute; left:290px; top:42.5px; font-size:14px; border-bottom:2px solid black; font-weight:bold;">&Sqrt;t method</p>
+	<div id="chartContainer16" style="height: 400px; width: 700px; margin-left:-20px; margin-right:100px; margin-top:95px"></div> 
+	
+	<div style="  position:absolute; left:575px; top:455px; background-color:white; width:120px; height:60px;"></div>
+	<div style="  position:absolute; left:-25px; top:455px; background-color:white; width:120px; height:60px;"></div>
+	
+	&nbsp;<span class="tooltip" style="border-bottom:1px dotted; color:red; position:absolute; position:absolute; top:60px; cursor:pointer;"><strong>Description</strong>
+	<span  class="tooltiptext" style="font-size:14px; text-align:justify; position:absolute; left:50px; padding-right:30px; line-height:160%;">
+	<ol>
+		<li>Plot the dial gauge readings v/s √t on a normal graph sheet</li>
+		<li>Join the points with a smooth curve</li>
+		<li>Now draw a tangent to the curve and the point of intersection as A in y-axis and as B in x-axis</li>
+		<li>Multiply the value of B by 1.15 and mark the point C on the x-axis</li>
+		<li>Now join the points A and C</li>
+		<li>Mark the point of intersection of line AC to the curve as point D</li>
+		<li>Draw a vertical line joining the point D to the x-axis, this will provide us √t<sub>90</sub> value from the graph</li>
+	</ol>
+	</span></span>
+</div>
+
+<div class="simsubscreen" id="canvas17" style="visibility:hidden">
+	<h2 style="font-family:verdana;  position:absolute; left:10px; top:20px; ">Calculations</h2>
+	<span class="tooltip" style="border-bottom:1px dotted; position:absolute; left:10px; top:250px; cursor:pointer;"><strong>Variables used in calculation</strong>
+	<span  class="tooltiptext" style="font-size:14px; text-align:justify; width:400px; left:90%;">
+	<p>Time factor, T<sub>v</sub>90 = 0.845</p>
+	<p>Time corresponding to 90% consolidation, t<sub>90</sub> = 2.66min</p>
+	<p>Drainage path, d = 0.983</p>
+	</span></span>
+	
+	<div style="position:absolute; left:10px; top:120px;">
+	<span style="font-size:14px;">Coefficient of consolidation, C<sub>v</sub> = <span class="frac"><sup>T<sub>v</sub>90 x d<sup>2</sup> </sup><span>&frasl;</span><sub>t<sub>90</sub></sub></span>
+	<span style="position:absolute; left:222.5px; top:80px;">= &nbsp;<input id="rootTcv" type="text" style="width:45px; width:50px; border:none; border-bottom:2px solid black;" required><span style="position:absolute; left:77.5px; top:-1px;">cm<sup>2</sup>/sec</span></span>
+	<span id="mark17" class="markHidden" style="position:absolute; left:370px; top:77.5px; font-size:20px; "></span>
+	<button id="check17" class="clsBtn" style="position:absolute; left:400px; top:77px;">CHECK</button>
+	<button id="result17" class="clsBtn" style="position:absolute; left:455px; top:77px;">RESULT</button>
+	</span>
+	</div>
+	
+	<div id="inference" style="position:absolute; left:5px; top:300px; visibility:hidden;">
+		<h3>Inference:</h3>
+      <p style="font-size:14px; line-height:200%;">The coefficient of consolidation obtained by root t and log t method is 2.5 and 2.067x10-3 cm2/sec. As the consolidation value ranges between 1 to 6 cm<sup>2</sup> sec the soil can be characterized as Boston blue clay (marine deposit of glacial clay, composed partially of illite) Remolded.</p>
+	</div>
+</div>
+
+<div id="questDiv" style="position:absolute; font-size:14px; background-color:grey; color:white; padding:7.5px; border-radius:5px; visibility:hidden;">
+	<p id="q"></p>
+	<select id="answer" ></select>
+	<p id="a"></p>
+</div>
+
+<div id="nav">
+<img id="nextButton" onclick="navNext()" src="images/Next.png" />
+</div>
+
+<img class ="" id="arrow1" style="visibility:hidden;" src="images/arrow1.png"/>
+
+<div id="copyright"> &copy; 2020 - <script>document.write(new Date().getFullYear())</script> SOLVE - The Virtual Lab @ NITK Surathkal, Department of Water Resources & Ocean Engineering</div>
+</div>
+<script src="../assets/js/iframeResize.js"></script></body> 
+</html>
