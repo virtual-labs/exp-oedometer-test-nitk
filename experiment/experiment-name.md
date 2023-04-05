@@ -1,1 +1,1 @@
-## Determination of Coefficient of Consolidation by Oedometer test
+## Determination of coefficient of consolidation by oedometer test

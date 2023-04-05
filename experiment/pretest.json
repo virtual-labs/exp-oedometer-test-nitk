@@ -2,7 +2,7 @@
   "version": 2.0,
   "questions": [
     {
-      "question": "Decrease in volume of soil mass due to expulsion of air voids is known as __________.",
+      "question": "Decrease in volume of soil mass due to expulsion of air voids is known as ________________.",
       "answers": {
         "a": "Consolidation",
         "b": "Shrinkage",
@@ -19,7 +19,7 @@
       "difficulty": "beginner"
     },
     {
-      "question": "The consolidation of a soil mass can also be schematically explained using the ______________ .",
+      "question": "The consolidation of a soil mass can also be schematically explained using the ________________ .",
       "answers": {
         "a": "Spring analogy",
         "b": "Soil phase diagram",
@@ -36,7 +36,7 @@
       "difficulty": "beginner"
     },
       {
-        "question": "This is a Sample Question 2?",
+        "question": "Rate of escape of pore water is directly proportional to ________________ .",
         "answers": {
           "a": "Type of soil",
           "b": "Permeability",
@@ -70,7 +70,7 @@
         "difficulty": "intermediate"
       },
       {
-        "question": "The apparatus used for the conduction of this experiment is __________ .",
+        "question": "The apparatus used for the conduction of this experiment is ________________ .",
         "answers": {
           "a": "Triaxial testing machine",
           "b": "Consolidometer",
