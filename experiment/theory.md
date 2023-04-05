@@ -4,10 +4,10 @@
 
 <p>This decrease in volume can take place by two ways :</p>
 
-#### 1. Due to the expulsion of air voids.
+#### 1. Due to the expulsion of air voids
 <p style="text-indent:50px; text-align: justify;">This kind of decrease in volume under stress or pressure is known as the compressibility of soil and is a quick process. Here the air voids present in the soil mass gets expelled due to the pressure over it. This phenomenon is called compression.
 
-#### 2. Due to the expulsion of water voids.
+#### 2. Due to the expulsion of water voids
 <p style="text-indent:50px; text-align: justify;">This is a very gradual process where the water from the voids  present in the soil sample gets expelled. Such a compression resulting from long time static load applied over a saturated soil mass and consequent escape of pore water is termed consolidation.
 Consolidation of soil only takes place when the compression of soil has already taken place.</p>
 

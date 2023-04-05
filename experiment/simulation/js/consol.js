@@ -30,7 +30,7 @@ const speedTimingDataset=[0,15,45,75,105,135,165,195,225,255,285,660,780,900,102
 var questions=["Filter paper is used in the consolidation test so that it restrains the soil particles to get inside the porous stone.",
 			   "Consolidation is a process to ________.",
 			   "Porous stones are submerged in distilled water for ____ hours."];
-			   
+
 var options2=[["True","False"],//True
 			  ["Expel air voids","Expel water voids","Compress the soil particle","None of the above"],//Expel water voids
 			  ["3-6","10-12","4-8","1-2"]];//4-8
@@ -45,7 +45,7 @@ function validateFormativeQA(qn,ans,left,top)
 	el.textContent = " ";
 	el.value = " ";
 	answer.appendChild(el);
-  
+
 	for(j=0;j<options2[qn].length;j++)
 	{
 		opt = options2[qn][j];
@@ -74,14 +74,14 @@ function validateFormativeQA(qn,ans,left,top)
 	}
 }
 
-function create_totalTable(time,tabId) 
+function create_totalTable(time,tabId)
 {
 	let j=1;
     let table = document.getElementById(tabId);
     for(let i=dataset.length-1;i>0;i--)
     {
 		$("#"+tabId).delay(time)
-		.queue(function (create_totalTable) 
+		.queue(function (create_totalTable)
 		{
 			$(this).append("<tr><td style=\"border:1px solid black; padding:5px;\">" + dataset[j][0]  + "</td><td style=\"border:1px solid black; padding:5px;\">"+ dataset[j][1] +"</td><td style=\"border:1px solid black; padding:5px;\">"+ dataset[j][2]  +"</td></tr>");
 			j++;
@@ -111,7 +111,7 @@ function animatearrow()
         document.getElementById('arrow1').style.visibility="hidden";
 }
 
-function myStopFunction() 
+function myStopFunction()
 {
      clearInterval(myInt);
      document.getElementById('arrow1').style.visibility="hidden";
@@ -121,13 +121,13 @@ function blinkArrow(l,t,correctAnswer,h)
 {
 	myInt = setInterval(function(){ animatearrow(); }, 500);
 	document.getElementById('arrow1').style="visibility:visible ;position:absolute; left:"+l+"px; top:"+t+"px; height:"+h+"px; z-index: 10;";
-	document.getElementById("arrow1").style.WebkitTransform = "rotate("+correctAnswer+"deg)"; 
+	document.getElementById("arrow1").style.WebkitTransform = "rotate("+correctAnswer+"deg)";
 	document.getElementById("arrow1").style.msTransform = "rotate("+correctAnswer+"deg)";
 	document.getElementById("arrow1").style.transform = "rotate("+correctAnswer+"deg)";
 }
 
 function commonStmtsInEvaluateCalculationAnswers(inputBoxId, checkBtnId, resultBtnId, RgtWrngMarkId)
-{	
+{
 	document.querySelector(RgtWrngMarkId).classList.remove("showWrongMark");
 	document.querySelector(inputBoxId).disabled=true;
 	document.querySelector(inputBoxId).style.color="black";
@@ -152,7 +152,7 @@ function evaluateCalculationAnswers(inputBoxId,rightAnswer,checkBtnId,resultBtnI
 				document.querySelector(RgtWrngMarkId).classList.add("showRightMark");
 				commonStmtsInEvaluateCalculationAnswers(inputBoxId, checkBtnId, resultBtnId, RgtWrngMarkId);
 			}
-			else 
+			else
 			{
 				document.querySelector(RgtWrngMarkId).classList.remove("markHidden");
 				document.querySelector(RgtWrngMarkId).innerHTML="&#10008;";
@@ -175,7 +175,7 @@ let degree=0, m=0, stop=false, x=0,counter=0, swDegree, n=0, runOnce=true, dialG
 // function updateTableOnDialGuageReading()
 // {
 	// $("#tab12").delay(0)
-	// .queue(function (updateTableOnDialGuageReading) 
+	// .queue(function (updateTableOnDialGuageReading)
 	// {
 		// console.log(dataset[x][2]);
 		// $(this).append("<tr><td style=\"border:1px solid black; padding:5px;\">" + dataset[x][0]  + "</td><td style=\"border:1px solid black; padding:5px;\">"+ dataset[x][1] +"</td><td style=\"border:1px solid black; padding:5px;\">"+ dataset[x][2]  +"</td></tr>");
@@ -204,29 +204,29 @@ function rotateStopwatchNeedle(el)
 	// console.log(swDegree);
 	const stopWatchSpeed = (x==0) ? 15 : (speedTimingDataset[x] - speedTimingDataset[x-1])/10;
 	const elem = document.getElementById(el);
-	
+
 	if(navigator.userAgent.match("Chrome"))
 	{
 		elem.style.WebkitTransform = "rotate("+swDegree+"deg)";
-	} 
+	}
 	else if(navigator.userAgent.match("Firefox"))
 	{
 		elem.style.MozTransform = "rotate("+swDegree+"deg)";
-	} 
+	}
 	else if(navigator.userAgent.match("MSIE"))
 	{
 		elem.style.msTransform = "rotate("+swDegree+"deg)";
-	} 
+	}
 	else if(navigator.userAgent.match("Opera"))
 	{
 		elem.style.OTransform = "rotate("+swDegree+"deg)";
-	} 
-	else 
+	}
+	else
 	{
 		elem.style.transform = "rotate("+swDegree+"deg)";
 	}
-	
-	if(counter < speedTimingDataset.length-1) 
+
+	if(counter < speedTimingDataset.length-1)
 	{
 		swDegree=n++;
 		looper2 = setTimeout('rotateStopwatchNeedle(\''+el+'\','+stopWatchSpeed+')',stopWatchSpeed);
@@ -238,7 +238,7 @@ function rotateStopwatchNeedle(el)
 				{
 					showTableReading();
 				}
-				else 
+				else
 				{
 					for(i=4;i<=8;i++)
 					{
@@ -250,7 +250,7 @@ function rotateStopwatchNeedle(el)
 				}
 			}
 		},1000);
-		
+
 	}
 	// console.log(degree,swDegree);
 }
@@ -262,28 +262,28 @@ function rotateAnimation(el)
 	if(navigator.userAgent.match("Chrome"))
 	{
 		elem.style.WebkitTransform = "rotate("+degree+"deg)";
-	} 
+	}
 	else if(navigator.userAgent.match("Firefox"))
 	{
 		elem.style.MozTransform = "rotate("+degree+"deg)";
-	} 
+	}
 	else if(navigator.userAgent.match("MSIE"))
 	{
 		elem.style.msTransform = "rotate("+degree+"deg)";
-	} 
+	}
 	else if(navigator.userAgent.match("Opera"))
 	{
 		elem.style.OTransform = "rotate("+degree+"deg)";
-	} 
-	else 
+	}
+	else
 	{
 		elem.style.transform = "rotate("+degree+"deg)";
 	}
-	
+
 	if(degree===360) m=0;
-	
+
 	if(counter===3) document.getElementById("12-5").style.transform="rotate(-105deg)";
-		
+
 	if(counter<=10)
 	{
 		m++;
@@ -356,7 +356,7 @@ function magic()
 			},1000);
 		}
 	}
-	
+
 	else if(simsubscreennum == 2)
 	{
 		document.getElementById("1-8").style.visibility="hidden";
@@ -386,7 +386,7 @@ function magic()
 								document.getElementById("2-6").style.visibility="hidden";
 								document.getElementById("2-2").style.visibility="hidden";
 								document.getElementById("2-3").style.visibility="visible";
-								setTimeout(function(){		
+								setTimeout(function(){
 								document.getElementById("nextButton").style.visibility="visible";
 								},200);
 							},1450);
@@ -394,7 +394,7 @@ function magic()
 					},250);
 				},1450);
 			});
-			
+
 		},350);
 	}
 	else if(simsubscreennum == 3)
@@ -412,10 +412,10 @@ function magic()
 			}
 		},300);
 	}
-	
+
 	else if(simsubscreennum == 4)
 	{
-		document.getElementById("nextButton").style.visibility = "hidden";	
+		document.getElementById("nextButton").style.visibility = "hidden";
 		setTimeout(function()
 		{
 			document.getElementById("4-3").style.visibility="visible";
@@ -470,7 +470,7 @@ function magic()
 												document.getElementById("4-4").style.animation="rotateSpatula 0.5s forwards";
 												setTimeout(function()
 												{
-													document.getElementById("4-5").style.visibility="visible"; 
+													document.getElementById("4-5").style.visibility="visible";
 													document.getElementById("4-4").style.visibility="hidden";
 													document.getElementById("4-5").style="position:absolute; left: 465px; top: 395px; width: 90px; height: 25px; background-color: rgb(187, 131, 76); border-radius: 50%; visibility: visible;";
 													setTimeout(function()
@@ -486,13 +486,13 @@ function magic()
 															document.getElementById("4-4").style.animation="rotateSpatula 0.5s forwards";
 															setTimeout(function()
 															{
-																document.getElementById("4-5").style.visibility="visible"; 
+																document.getElementById("4-5").style.visibility="visible";
 																document.getElementById("4-4").style.visibility="hidden";
 																document.getElementById("4-5").style="position:absolute; left: 450px; top: 392px; width: 117px; height: 25px; background-color: rgb(187, 131, 76); border-radius: 50%; visibility: visible;";
 																setTimeout(function()
 																{
 																	document.getElementById("nextButton").style.visibility="visible";
-																},500);	
+																},500);
 															},500);//
 														},1500);
 													},500);
@@ -696,7 +696,7 @@ function magic()
 		const deltaH=((dataset[0][2]-dataset[14][2])*0.001);
 		const correctAnswer=(H-(deltaH/2))/2;
 		create_totalTable(0,"tab13");
-		evaluateCalculationAnswers('#dp',correctAnswer,'#check13','#result13','#mark13');	
+		evaluateCalculationAnswers('#dp',correctAnswer,'#check13','#result13','#mark13');
 	}
 	else if(simsubscreennum===14)
 	{
@@ -712,14 +712,14 @@ function magic()
 			   	// labelFormat: "{value}",
                 // title: { text: 'Elapsed time, t (min)' },
                 // range: { min:-5, max: 85, interval:5}
-            // },	
+            // },
 			// primaryYAxis:
             // {
 				// labelFormat: "{value}",
                 // title: { text: 'Dial gauge reading (div)' },
-                // range: { min: 340, max: 450, interval: 20}				
-            // },	
-			// series: 
+                // range: { min: 340, max: 450, interval: 20}
+            // },
+			// series:
 			// [
 			    // {
                 // points: [
@@ -751,18 +751,18 @@ function magic()
 						// height: 5, width: 5
 					// },
 					// visible: true
-				// },					
+				// },
 				// enableAnimation :false
                 // },
 				// {
 					// points: [
-					
+
 					// { x: -0.85, y: 430 , text : ''},
 					// { x: 1.5, y: 400 , text : ' '},
 					// { x: 4.8, y: 362, text : 'A'}
-					
+
 					// ],
-					// type: 'line', 
+					// type: 'line',
 					// // dashArray : '10,4',
 					// // name: '',
 					// fill: "#FF1493",
@@ -775,21 +775,21 @@ function magic()
                             // height: 5, width: 5
                         // },
 						// dataLabel:
-						// { 
-                          // visible:true, 
+						// {
+                          // visible:true,
                           // font: { color: 'FF1493', size: '10px' }
 						// },
                         // visible: false
-                    // },					
+                    // },
 					// enableAnimation :false
                 // },
 				// {
 					// points: [
-					
+
 					// { x: -5, y: 400, text : 'd50'},
 					// { x: 1.5, y: 400 , text : 'F' },
 					// { x: 1.5, y: 340, text : 't50'}
-					
+
 					// ],
 					// type: 'line',
 					// dashArray : '10,4',
@@ -804,23 +804,23 @@ function magic()
                             // height: 5, width: 5
                         // },
 						// dataLabel:
-						// { 
-                          // visible:true, 
+						// {
+                          // visible:true,
                           // font: { color: 'black', size: '12px' }
 						// },
                         // visible: true
-                    // },					
+                    // },
 					// enableAnimation :false
                 // },
 				// {
 					// points: [
-					
+
 					// { x: -5, y: 362, text : 'd100'},
 					// { x: 81, y: 362, text: ' '},
-				
+
 					// ],
- 
-                        						
+
+
 					// type: 'line',
 					// dashArray : '12,4',
 					// name: 'd100',
@@ -834,24 +834,24 @@ function magic()
                             // height: 5, width: 5
                         // },
 						// dataLabel:
-						// { 
-                          // visible:true, 
+						// {
+                          // visible:true,
                           // font: { color: 'black', size: '12px' }
 						// },
                         // visible: true
-                    // },					
+                    // },
 					// enableAnimation :false
                 // },
 				// {
 					// points: [
-					
+
 					// { x: -5, y: 436, text : 'd0'},
 					// { x: 8, y: 436, text: ' '},
 					// { x: 8, y: 430, text: 'z0'},
 					// { x: 0.25, y: 430, text: 'B'},
 					// ],
- 
-                        						
+
+
 					// type: 'line',
 					// dashArray : '12,4',
 					// name: 'd0',
@@ -865,12 +865,12 @@ function magic()
                             // height: 5, width: 5
                         // },
 						// dataLabel:
-						// { 
-                          // visible:true, 
+						// {
+                          // visible:true,
                           // font: { color: 'orange', size: '12px' }
 						// },
                         // visible: true
-                    // },					
+                    // },
 					// enableAnimation :false
                 // },
 				// {
@@ -879,8 +879,8 @@ function magic()
 					// { x: 8, y: 422, text: 'z0'},
 					// { x: 0.25, y: 422, text: 'C'},
 					// ],
- 
-                        						
+
+
 					// type: 'line',
 					// dashArray : '12,4',
 					// name: 'C',
@@ -894,22 +894,22 @@ function magic()
                             // height: 5, width: 5
                         // },
 						// dataLabel:
-						// { 
-                          // visible:true, 
+						// {
+                          // visible:true,
                           // font: { color: 'yellow', size: '12px' }
 						// },
                         // visible: true
-                    // },					
+                    // },
 					// enableAnimation :false
                 // },
 				// {
 					// points: [
-					
+
 					// { x: 0.25, y: 430, text: ''},
 					// { x: 0.25, y: 340, text: 't1'},
 					// ],
- 
-                        						
+
+
 					// type: 'line',
 					// dashArray : '12,4',
 					// name: 't1',
@@ -923,22 +923,22 @@ function magic()
                             // height: 5, width: 5
                         // },
 						// dataLabel:
-						// { 
-                          // visible:true, 
+						// {
+                          // visible:true,
                           // font: { color: 'lightgreen', size: '12px' }
 						// },
                         // visible: true
-                    // },					
+                    // },
 					// enableAnimation :false
                 // },
 				// {
 					// points: [
-					
+
 					// { x: 1, y: 422, text: ''},
 					// { x: 1, y: 340, text: 't2'},
 					// ],
- 
-                        						
+
+
 					// type: 'line',
 					// dashArray : '12,4',
 					// name: 't2',
@@ -952,12 +952,12 @@ function magic()
                             // height: 5, width: 5
                         // },
 						// dataLabel:
-						// { 
-                          // visible:true, 
+						// {
+                          // visible:true,
                           // font: { color: 'grey', size: '12px' }
 						// },
                         // visible: true
-                    // },					
+                    // },
 					// enableAnimation :false
                 // }
 			// ],
@@ -971,7 +971,7 @@ function magic()
 				// // },
 			// legend:{visible:true}
         // });
-		
+
 	}
 	else if(simsubscreennum===15)
 	{
@@ -991,7 +991,7 @@ function magic()
 		const correctAnswer=0.00256;
 		evaluateCalculationAnswers('#rootTcv',correctAnswer,'#check17','#result17','#mark17');
 	}
-}		
+}
 
 function weightOfContainer(id)
 {
@@ -1039,9 +1039,9 @@ function weightOfContainer(id)
 							{
 								validateFormativeQA(2,2,"150px","100px");
 							}
-							document.getElementById("nextButton").style.visibility="visible";
+							else document.getElementById("nextButton").style.visibility="visible";
 						},500);
-					},1300);	
+					},1300);
 				}
 			},750);
 		}

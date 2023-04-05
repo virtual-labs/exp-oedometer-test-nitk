@@ -15,7 +15,7 @@
       "difficulty": "beginner"
     },
     {
-      "question": "The vertical compression of the sample is measured using __________ .",
+      "question": "The vertical compression of the sample is measured using ________________ .",
       "answers": {
         "a": "Dial gauge",
         "b": "Pressure pad",
@@ -32,7 +32,7 @@
       "difficulty": "beginner"
     },
     {
-      "question": "In a standard oedometer test, the sample is __________ .",
+      "question": "In a standard oedometer test, the sample is ________________ .",
       "answers": {
         "a": "Confined vertically",
         "b": "Not confined laterally",
@@ -49,7 +49,7 @@
       "difficulty": "intermediate"
     },
     {
-      "question": "If the OCR value is greater than 1 then the soil is said to be __________ .",
+      "question": "If the OCR value is greater than 1 then the soil is said to be ________________ .",
       "answers": {
         "a": "Normally consolidated",
         "b": "Over consolidated",
@@ -62,7 +62,7 @@
         "c": "The maximum pressure that is ever experienced by soil is preconsolidated soil. If OCR value is less than 1 then it is preconsolidated soil.",
         "d": "The correct answer is provided in the above option."
       },
-      "correctAnswer": "c",
+      "correctAnswer": "b",
       "difficulty": "intermediate"
     },
     {
