@@ -6,7 +6,7 @@
 2. Click on the measuring jar to add water to the soil sample. After the water is added click on the trowel to mix the soil with water until a fine paste is formed.</br>
 <img src="images/2.png" /></br>
 
-3. Click on the porous stone to submerge them in distilled water prior to conduction of experiment. Saturate the porous stone for 4-8 hours. Click on the next button to proceed further.</br>
+3. Click on the porous stone to submerge them in distilled water prior to conduction of experiment. Saturate the porous stone for 4-8 hours. Click on the "Next Button" to proceed further.</br>
 <img src="images/3.png" /></br>
 
 4. Click on the spatula to fill the wet soil sample to the specimen ring.</br>
@@ -46,5 +46,5 @@
 <img src="images/15.png" /></br></br>
 <img src="images/16.png" /></br>
 
-18. Click on Next button to proceed to the final calculation part and to view the inference of the experiment.</br>
+18. Click on "Next Button" to proceed to the final calculation part and to view the inference of the experiment.</br>
 <img src="images/17.png" /></br></br></br>
